@@ -1,0 +1,185 @@
+html{
+    max-width: 100%;
+}
+
+.dashboard main{
+    padding: 200px 10% 0 10%;
+    min-height: 95vh;
+}
+
+.dashboard{
+    background-color: white;
+}
+
+.dashboard .navbar{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 6px rgba(193, 199, 208, 0.4);
+}
+
+.dashboard .left-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard .left-nav .menu{
+    height: 32px;
+}
+
+.dashboard .left-nav .images{
+    display: flex;
+    align-items: center;
+    
+}
+
+.dashboard .left-nav .logo{
+    height: 23px;
+    width: auto;
+    display: inline;
+    padding: 0 16px;
+    margin-right: 16px;
+    border-right: 1px solid #c1c7d0;
+}
+
+
+.right-nav .avatar{
+    display: block;
+    border-radius: 50%;
+}
+
+.right-nav .avatar:hover{
+    cursor: pointer;
+}
+
+.dashboard main > h2{
+    margin-bottom: 8px;
+}
+
+.things-to-do{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    margin-bottom: 8px;
+    border: 1px solid #DDDDDD;
+    width: 60%;
+}
+
+.circle-and-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle-and-text .circle{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+    margin-right: 18px;
+}
+
+.button button{
+    background-color: inherit;
+    border: none;
+    color: #0052CC;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+.resume button{
+    background-color: rgba(9, 30, 66, 0.04);;
+    color: #091E42;
+    border-radius: 3px;
+    padding: 6px 12px;
+}
+
+.button button:hover{
+    cursor: pointer;
+}
+
+.dashboard main h1{
+    margin-bottom: 16px;
+}
+
+.dashboard main > p{
+    margin-bottom: 64px;
+}
+
+
+
+
+.dashboard .dropdown{
+    box-shadow: 0px 3px 5px rgba(9, 30, 66, 0.2), 0px 0px 1px rgba(9, 30, 66, 0.31);
+    width: 300px;
+    position: absolute;
+    top: 72px;
+    transition: 200ms;
+    right: 0;
+    padding: 28px 0 0 0;
+}
+
+.roles{
+    display: flex;
+    flex-direction: column;
+}
+
+.role{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    margin-bottom: 9.5px;
+}
+
+.icon-and-role{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    background-color: #0052CC;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    display: flex;
+    margin-right: 12px;   
+}
+
+.icon img{
+    width: 24px;
+    display: block;
+    margin: auto;
+    height: auto;
+}
+
+.dropdown hr{
+    margin: 0;
+}
+Link{
+    text-decoration: none;
+}
+
+.dropdown .log-out{
+    padding: 20px;
+    text-decoration: none;
+}
+
+.dropdown .name{
+    padding: 28px 20px 16px 20px;
+}
+.dropdown > h3{
+    padding: 0 20px;
+    margin-bottom: 28px;
+}
+
+.dropdown .use-as{
+    padding: 0 20px;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width : 768px){
+    .dashboard main{
+        padding-top: 400px;
+    }
+}

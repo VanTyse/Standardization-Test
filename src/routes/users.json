@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "email": "o.nwangwu@genesystechhub.com",
+        "name" : "Ositadinma Nwangwu",
+        "password" : "qwerty1234"
+    },
+    {
+        "id": 2,
+        "email": "vantyse@gmail.com",
+        "name" : "Okafor Kingsley",
+        "password" : "qwerty1234"
+    }
+]

@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --font-size: 14px;
+}
+
+
+@font-face {
+  font-family: Circular Std;
+  src: url('./fonts/circular-std-medium-500.ttf');
+}
+
+body {
+  font-family: Circular Std, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-size: var(--font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  margin: auto;
+  background-color: #f4f5f7;
+}
+
