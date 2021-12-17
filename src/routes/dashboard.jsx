@@ -19,7 +19,7 @@ function Nav(props){
             <div className='left-nav'>
                 <div className="images">
                     <img className="menu" src={menuBar} alt="" />
-                    <img className="logo" src={logo} alt="" />   
+                    <Link to='/' style={{textDecoration : none}}><img className="logo" src={logo} alt="" /></Link>
                 </div>
                 <div className="text">
                     <p>TM Dashboard</p>
