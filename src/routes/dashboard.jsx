@@ -137,7 +137,7 @@ class Dashboard extends React.Component{
             <div className="dashboard">
                 <Nav onClick={this.handleClick}/>
                 <DropDown  clicked = {this.state.clicked} name = {name.toUpperCase()} />
-                <main>
+                <main style={{paddingTop : this.state.clicked ? '400px' : '25vh'}}>
                     <h1>Hello, {name}</h1>
                     <p>Welcome and good to have you back.</p>
 
