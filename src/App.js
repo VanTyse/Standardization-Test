@@ -84,17 +84,20 @@ class Nav extends React.Component{
     this.handleCrossClick = this.handleCrossClick.bind(this)
     this.state = {
       on : false,
-      displayimage : 'block',
+      displayMenuBar : 'block',
       displayCross : "none"
     }
   }
 
   handleImageClick(){
-    this.setState({ on: !this.state.on, displayImage: 'none', displayCross: 'block' })
+    this.setState({ on: !this.state.on, displayMenuBar: 'none', displayCross: 'block' })
   }
 
   handleCrossClick(){
-    this.setState({ on: !this.state.on, displayImage: 'block', displayCross: 'none' })
+    this.setState({ 
+       on: !this.state.on,
+       displayMenuBar: 'block', displayCross: 'none' 
+      })
   }
 
   render(){
@@ -102,14 +105,21 @@ class Nav extends React.Component{
       <>
         <nav className="navbar">
           <img className="logo-img-mobile" src={logoMobile} alt="logo"/>
-          <img className="logo-img" src={logo}/>
-          <img className="menu-bar-img" style={{display: this.state.displayImage}} src={menuBar} onClick={this.handleImageClick}/>
+          <div className="bs-logo">
+            <img className="logo-img" src={logo}/>
+            <div className="features-and-about">
+              <p className="feat">Features</p>
+              <p>About</p>
+            </div>
+          </div>
+            
+          <img className="menu-bar-img" style={{display: this.state.displayMenuBar}} src={menuBar} onClick={this.handleImageClick}/>
           <img className="cross" src={cross} style={{display: this.state.displayCross}} onClick={this.handleCrossClick}/>
           <div className="nav-items">
             <div className="sign-up">
               Sign up
             </div>
-            <Link to='/sign-in'>
+            <Link style={{textDecoration : "none"}} to='/sign-in'>
               <div className="sign-in">
                 Sign in
               </div>
@@ -215,12 +225,10 @@ const frame4 = (
 
 function Sponsors(){
   return(
-    <div className="sponsors" >
-      <div className="sponsor1">
+    <div className='se' >
+      <div className="sponsors">
         <img className="unn" src={sponsor1} alt="unn" />
         <img className="genesys" src={sponsor2} alt="Genesys" />
-      </div>
-      <div className="sponsor2" >
         <img className="private-estates" src={sponsor3} alt="Private-Estates" />
         <img className="tenece" src={sponsor4} alt="Tenece" />
       </div>
