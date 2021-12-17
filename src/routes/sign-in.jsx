@@ -14,13 +14,10 @@ let user = null;
 let email;
 
 function Input(props){
-    function handleClick(){
-
-    }
     return(
         <div className="input">
             <input value={props.value || null} type={props.type} placeholder={props.placeholder} onChange={props.onClick}/>
-            <div>
+            <div className="image">
                 {<img style={{display : props.exists ? 'block' : 'none'}} src={props.src} alt="" />}
             </div>
         </div>
@@ -41,6 +38,18 @@ class AuthenticationCard extends React.Component{
         this.handlePasswordChange = this.handlePasswordChange.bind(this)
         this.handleClick = this.handleClick.bind(this);
         this.handleClick1 = this.handleClick1.bind(this);
+    }
+
+    componentWillUnmount(){
+        this.setState({
+            inputEmail : '',
+            submitEmail : '',
+            inputPassword : '',
+            submitPassword : '',
+            exists : false,
+        })
+
+        user = null;
     }
 
     handleClick(e){
@@ -67,7 +76,7 @@ class AuthenticationCard extends React.Component{
         if (user1){
             const s = setInterval(() => {
                 this.setState({exists : true})
-            }, 750);
+            }, 500);
         }
         let input = user ? <Input src={eye} exists={this.state.exists} value={this.state.inputPassword} type="password" placeholder="Enter Password" onClick={this.handlePasswordChange}/> :
             <Input src={check} exists={this.state.exists} type="email" placeholder="Enter Email"  onClick={this.handleEmailChange}/> 
@@ -77,7 +86,7 @@ class AuthenticationCard extends React.Component{
 
         if(user){
             if (this.state.inputPassword === user.password){
-                button = <Link to="/user/dashboard"><button style={{backgroundColor : '#0052CC'}} type='button'>Submit</button></Link>
+                button = <Link to="/user/dashboard"><button style={{backgroundColor : '#0052CC'}} type='button'></button></Link>
             }
         }    
         return(
@@ -91,12 +100,12 @@ class AuthenticationCard extends React.Component{
                         <p>{user ? user.email : null}</p>
                     </div>
                     
-                    <form action="" onSubmit={this.handleSubmit}>
+                    <form>
                         <h2 className="passOrEmail">{user ? 'Password' : 'Email Address'}</h2>
                         {input}
                         {button}
                         <hr/>
-                        <p>Forgot password?</p>
+                        <Link to='/sign-in/reset-password' style={{ textDecoration: 'none' }}><p>Forgot password?</p></Link>
                     </form>
                 </div>
             </>
