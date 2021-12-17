@@ -29,6 +29,10 @@
     display: none;
 }
 
+.bs-logo{
+    display: none;
+}
+
 .cross{
     display: none;
     min-width: 30px;
@@ -41,7 +45,7 @@
 .drop-down{
     padding: 56px 17px 24px 17px;
     background-color: var(--main-color);
-
+    transition: 200ms;
     /* display: none; */
 }
 
@@ -304,6 +308,22 @@ p{
     display: block;
 }
 
+.se .sponsors{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+
+}
+
+/* .se .sponsors img{
+    width: 50%;
+    max-height: 30px;
+    height: auto;
+    margin-bottom: 5px; 
+}*/
+
 @media screen and (min-width: 768px) {
 
     .navbar{
@@ -313,14 +333,33 @@ p{
     .logo-img{
         display: inline-block;
         max-height: 24px;
+        margin-right: 32px;
     }   
+
+    .bs-logo{
+        display: flex;
+        align-items: center;
+    }
+
+    .bs-logo > div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bs-logo div >p{
+        font-size: 16px;
+    }
+
+    .feat{
+        margin-right: 40px;
+    }
 
     .logo-img-mobile{
         display: none;
     }
 
     .menu-bar-img{
-        display: none;
+        display: none !important;
     }
 
     .nav-items{
@@ -344,6 +383,11 @@ p{
         display: flex;
         align-items: center;
         padding: 40px 10% 0 10%;
+    }
+
+    .frame1 .hero-text h1{
+        font-size: 3.1vw;
+        line-height: 4.1vw;
     }
 
     .frame1-img{
@@ -443,6 +487,30 @@ p{
     .sponsor2{
         justify-content: space-between;
         padding-top: 10px;
+    }
+
+    .genesys{
+        width: 20%;
+        max-height: auto;
+        order: 4;
+    }
+    
+    .unn{
+        width: 20%;
+        height: auto;
+        order: 1;
+    }
+    
+    .private-estates{
+        width: 20%;
+        height: auto;
+        order: 3;
+    }
+    
+    .tenece{
+        width: 20%;
+        height: 35px;
+        order: 2;
     }
 
     .footer{
