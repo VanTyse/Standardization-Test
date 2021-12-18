@@ -2,10 +2,6 @@ html{
     max-width: 100%;
 }
 
-.dashboard main{
-    padding: 25vh 10% 0 10%;
-    min-height: 95vh;
-}
 
 .dashboard{
     background-color: white;
@@ -51,6 +47,11 @@ html{
 
 .right-nav .avatar:hover{
     cursor: pointer;
+}
+
+.dashboard main{
+    padding: 25vh 10% 0 10%;
+    min-height: 95vh;
 }
 
 .dashboard main > h2{
@@ -156,9 +157,6 @@ html{
 .dropdown hr{
     margin: 0;
 }
-Link{
-    text-decoration: none;
-}
 
 .dropdown .log-out{
     padding: 20px;
@@ -178,8 +176,27 @@ Link{
     margin-bottom: 8px;
 }
 
+.log-out{
+    color: #172B4D;
+}
+
+Link:visited{
+    text-decoration: none;
+}
+
+
+
 @media screen and (max-width : 768px){
-    .dashboard main{
-        padding-top: 400px;
+    .dashboard .main{
+        padding: 5%;
+        padding-top: 17vh;
+    }
+
+    .things-to-do{
+        width: 100%;
+    }
+
+    .dashboard .top{
+        padding: 370px 5%;
     }
 }
