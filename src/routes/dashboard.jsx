@@ -32,8 +32,6 @@ function Nav(props){
     )
 }
     
-
-
 function ThingsToDo(props){
     return(
         <div className="things-to-do">
@@ -132,12 +130,14 @@ class Dashboard extends React.Component{
         else{
             name = 'Ositadinma Nwangwu';
         }
+        
+        let className = this.state.clicked ? 'top' : null;
          
         return(
             <div className="dashboard">
                 <Nav onClick={this.handleClick}/>
                 <DropDown  clicked = {this.state.clicked} name = {name.toUpperCase()} />
-                <main style={{paddingTop : this.state.clicked ? '400px' : '25vh'}}>
+                <main className ={`main ${className}`}>
                     <h1>Hello, {name}</h1>
                     <p>Welcome and good to have you back.</p>
 
